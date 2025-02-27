@@ -1,0 +1,76 @@
+.navSidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1a1a1a;
+    width: 50px;
+    gap: 2px;
+
+    .isMobile {
+        display: none;
+        @media (max-width: 700px) {
+            display: block;
+        }
+    }
+
+    .listAvatarMobile {
+        flex: 1;
+        overflow: hidden auto;
+
+        &::-webkit-scrollbar {
+            width: 2px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #282727;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #4c4c4c;
+        }
+
+        .userOther {
+            padding: 4px;
+            border-radius: 50%;
+            margin-bottom: 8px;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #474747;
+            }
+        }
+
+        .activeUser {
+            background-color: #474747;
+        }
+
+        .avatarOther {
+            background: #1890ff;
+        }
+    }
+
+    .navIcon {
+        color: #ffffff;
+        background: transparent;
+        border: none;
+        font-size: 20px;
+        &:hover {
+            color: #1890ff;
+        }
+    }
+
+    .divider {
+        width: 80%;
+        height: 1px;
+        background: #444;
+        margin: 10px 0;
+    }
+
+    .avatarSelf {
+        background-color: green;
+        &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+    }
+}

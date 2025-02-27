@@ -1,0 +1,166 @@
+.chatArea {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    background: #282727;
+    position: relative;
+    margin-left: 16px;
+
+    .chatHeader {
+        display: flex;
+        align-items: center;
+        height: 56px;
+        gap: 10px;
+        padding: 10px 12px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+
+        .avatar {
+            background: #1890ff;
+        }
+
+        .chatInfo {
+            .username {
+                color: white;
+                font-size: 15px;
+            }
+
+            .status {
+                color: #b0b3b6;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .loadingSpinner {
+        text-align: center;
+        font-size: 14px;
+        color: #888;
+        margin: 10px 0;
+    }
+
+    .messages {
+        flex: 1;
+        padding: 16px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 14px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #282727;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #4c4c4c;
+        }
+    }
+
+    .btnViewNewMessage {
+        position: absolute;
+        left: 48%;
+        bottom: 0;
+        opacity: 0;
+        background: #4c4c4c;
+        transition: all 0.2s linear;
+
+        svg {
+            height: 16px;
+            width: 16px;
+            fill: #fff;
+        }
+    }
+
+    .showBtn {
+        transform: translateY(-180%);
+        opacity: 1;
+    }
+
+    .chatInfo {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .chatActions {
+        display: flex;
+        gap: 8px;
+    }
+
+    .messageItem {
+        width: fit-content;
+        height: fit-content;
+        max-width: 588px;
+        min-height: 35px;
+        border-radius: 20px;
+        margin: 0;
+        padding: 8px 12px;
+        margin-top: 2px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    .selfMessage {
+        margin-left: auto;
+        background: #3c53ff;
+        span {
+            color: white !important;
+        }
+    }
+
+    .otherMessage {
+        margin-right: auto;
+        background: #4c4c4c;
+        span {
+            color: #e4e6eb !important;
+        }
+    }
+
+    .inputArea {
+        display: flex;
+        align-items: flex-end;
+        gap: 20px;
+        margin: 12px;
+
+        .btnSubmit {
+            height: 36px;
+            width: 36px;
+            &:hover {
+                cursor: pointer;
+                background-color: #474747;
+            }
+
+            svg {
+                width: 20px;
+                height: 20px;
+
+                fill: #3c53ff;
+            }
+        }
+
+        :global {
+            .ant-input-affix-wrapper,
+            textarea {
+                background: #3a3b3c;
+                border: none !important;
+                outline: none !important;
+            }
+
+            textarea {
+                resize: none;
+                color: #e4e6eb;
+
+                font-size: 15px;
+                border-radius: 20px;
+                &::placeholder {
+                    color: #b0b3b8;
+                }
+            }
+        }
+    }
+}

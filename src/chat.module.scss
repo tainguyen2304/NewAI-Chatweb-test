@@ -1,0 +1,59 @@
+// Chat.module.scss
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-window {
+    display: flex;
+    width: 80%;
+    height: 80vh;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-list {
+    width: 25%;
+    background: #ddd;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.chat-box {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.messages {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.sent {
+    text-align: right;
+    color: blue;
+}
+
+.received {
+    text-align: left;
+    color: green;
+}
+
+.input-box {
+    display: flex;
+    padding: 10px;
+}

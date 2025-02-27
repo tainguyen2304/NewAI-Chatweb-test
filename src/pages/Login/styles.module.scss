@@ -1,0 +1,26 @@
+.loginPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+
+    .card {
+        width: 300px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .title {
+        margin-bottom: 40px;
+        margin-top: 0 !important;
+    }
+
+    .input {
+        margin-bottom: 10px;
+    }
+
+    .button {
+        width: 100%;
+    }
+}

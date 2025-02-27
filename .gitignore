@@ -1,0 +1,15 @@
+# turbo
+.turbo
+
+# dependencies
+node_modules
+
+# build
+dist
+
+# env
+.env
+
+# misc
+.DS_Store
+pnpm-lock

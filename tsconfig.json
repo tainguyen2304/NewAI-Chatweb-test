@@ -1,0 +1,9 @@
+{
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"],
+  "references": [
+    { "path": "../shared-models" },
+    { "path": "./tsconfig.app.json" }
+  ],
+  "extends": "../tsconfig.base.json"
+}
